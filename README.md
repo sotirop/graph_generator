@@ -63,7 +63,7 @@ user> ./graph_generator.py -v 10
 ### max distance
 Create a graph with 4 vertices and probability 1 that any edge exists, with each edge length between 0.0 and 24.0.
 ```
-# ./graph_generator.py -v 4 -d 1 -md 24.0
+user> ./graph_generator.py -v 4 -d 1 -md 24.0
    0    1   9.036901
    0    2  19.743478
    0    3  20.234961
@@ -74,7 +74,7 @@ Create a graph with 4 vertices and probability 1 that any edge exists, with each
 ### directed graph
 Create a directed graph with 4 vertices and probability 1 that any edge exists, with each edge length between 0.0 and 5.0.
 ```
-# ./graph_generator.py -v 4 -d 1 -md 5.0 -dir
+user> ./graph_generator.py -v 4 -d 1 -md 5.0 -dir
    0    1   3.404863
    0    2   3.213175
    0    3   3.053851
@@ -91,7 +91,7 @@ Create a directed graph with 4 vertices and probability 1 that any edge exists, 
 ### loops (edge from vertex to itself)
 Create a directed graph with 3 vertices and probability 1 that any edge exists, with each edge length between 0.0 and 10.0, where loops are permitted.
 ```
-# ./graph_generator.py -v 3 -d 1 -md 10.0 -dir -l
+user> ./graph_generator.py -v 3 -d 1 -md 10.0 -dir -l
    0    0   7.545652
    0    1   2.331990
    0    2   6.899898
