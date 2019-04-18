@@ -88,7 +88,7 @@ user> ./graph_generator.py -v 4 -d 1 -md 5.0 -dir
    3    1   2.859499
    3    2   3.876708
 ```
-### loops (edge from vertex to itself)
+### loops (edge from vertex to itself is permitted)
 Create a directed graph with 3 vertices and probability 1 that any edge exists, with each edge length between 0.0 and 10.0, where loops are permitted.
 ```
 user> ./graph_generator.py -v 3 -d 1 -md 10.0 -dir -l
@@ -101,4 +101,17 @@ user> ./graph_generator.py -v 3 -d 1 -md 10.0 -dir -l
    2    0   1.872887
    2    1   4.078114
    2    2   1.067111
+```
+
+### using the same seed gives the same results
+Create an undirected graph with 5 vertices and probability 0.40 that any edge exists, with each edge length between 0.0 and 10.0, using `random_text` as seed.
+```
+user> ./graph_generator.py -s random_text
+   0    3   7.047966
+   1    3   4.807293
+   3    4   6.304101
+user> ./graph_generator.py -s random_text
+   0    3   7.047966
+   1    3   4.807293
+   3    4   6.304101
 ```
