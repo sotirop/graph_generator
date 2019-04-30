@@ -20,12 +20,18 @@ def main(vertices, density, max_d, seed):
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description = 'Generate a random undirected graph')
-  parser.add_argument('-v', '--vertices', type=int, default=5, help='the number of vertices, default: 5')
-  parser.add_argument('-d', '--density', type=float, default=0.4, help='probability of an edge to be created, default 0.4')
-  parser.add_argument('-md', '--max_d', type=float, default=10.0, help='max distance of an edge, default: 10.0')
-  parser.add_argument('-s', '--seed', default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), help='seed string, input to random.seed funtion, default: datetime.now() value')
-  parser.add_argument('-dir', '--directed', action='store_true', help='assume directed graph, default is undirected')
-  parser.add_argument('-l', '--loop', action='store_true', help='permit loops, default loops are not permitted')
+  parser.add_argument('-v', '--vertices', type=int,
+    default=5, help='the number of vertices, default: 5')
+  parser.add_argument('-d', '--density', type=float,
+    default=0.4, help='probability of an edge to be created, default 0.4')
+  parser.add_argument('-md', '--max_d', type=float,
+    default=10.0, help='max distance of an edge, default: 10.0')
+  parser.add_argument('-s', '--seed', default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    help='seed string, input to random.seed funtion, default: datetime.now() value')
+  parser.add_argument('-dir', '--directed', action='store_true',
+    help='assume directed graph, default is undirected')
+  parser.add_argument('-l', '--loop', action='store_true',
+    help='permit loops, default loops are not permitted')
   args = parser.parse_args()
   Directed = args.directed
   Loop = args.loop
